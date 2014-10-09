@@ -1,11 +1,23 @@
- <html ng-app>
+ <html ng-app="minhaApp">
   <head>
-        <title>Hello World</title>
-         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+  	    <meta charset="UTF-8" /> 
+        <title> Angular Lab </title>
+         <script src="angular.min.js"></script>
+         <script src="app.js"></script>
      </head>
-   <body>
-    	Hello <input type="text" ng-model="meuNome"/>
+   <body ng-controller="OlaCtrl">
+    	 
     	<hr/>
-    	<h3> {{ meuNome }} esta utilizando AngularJS </h3>
+    	<table width="40%">
+          <tr>
+          	  <th> Nome </th> <th> idade </th> <th> email </th>
+          </tr>
+          <tr>
+             <td>  {{ nome }}     </td>
+              <td> {{ idade }}    </td> 
+              <th> {{ email }}   </td>
+          </tr>
+
+    	</table> 
     </body>
  </html>
