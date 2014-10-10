@@ -1,0 +1,36 @@
+<html ng-app='ToDoApp'>
+  <head>
+  	    <meta charset="UTF-8" /> 
+        <title> To Do List </title>
+         
+     </head>
+     <body>
+     	  <script src="angular.min.js"></script>
+          <script src="appTarefas.js"></script>
+     	
+     	<input type="text" ng-model='nome'>
+            <br>
+            <h3> {{ nome  }} </h3> 
+     	
+     	<div ng-controller="TarefasCtrl" class="todo">
+                   <ul>
+                      <li ng-repeat="tarefa in todos" >
+
+                      	     {{ tarefa.tarefa }}
+    
+                      </li>      
+                   </ul>
+                   {{ teste	 }}
+             
+     	</div>  
+    
+
+
+
+
+
+
+
+          
+     </body>
+     </html>
