@@ -26,6 +26,16 @@
  
              </li>
        </ul>
+       <hr>
+       <h3> Documentos </h3>
+       <table width="40%" ng-controller="DocsCtrl"  >
+         <tr ng-repeat=" doc in documento" >
+               <td> <input type="checkbox"> </td>
+               <td  >   {{ doc.titulo }} </td> 
+               <td> <a href="www.teste.com/{{ doc.url }}"> download </a>   </td>
+               <td> <input type="button" value="{{ doc.id }}" id="" class="btoAction" > </td>
+         </tr>
+       </ul>
 
     </body>
  </html>

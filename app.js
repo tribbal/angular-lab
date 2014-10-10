@@ -12,7 +12,23 @@ var app = angular.module('minhaApp', [] ) ;
          $scope.nacoes = pais ;
 
     }); //end controller
-       
+
+    
+  app.controller( 'DocsCtrl' , function( $scope ){
+     
+          $scope.documento = arquivos ;   
+
+
+  } )//end controler
+
+    var arquivos  = [   { id: 1 , titulo:"Edital teste" , url:"edital_teste.doc" }
+                       ,{ id: 2 , titulo:"CRC 456" , url:"teste.pdf" }
+                       ,{ id: 3 , titulo:"Contabil" , url:"teste.pdf" }
+                       ,{ id: 4 , titulo:"Aprovação 456" , url:"teste.pdf" }
+                       ,{ id: 5 , titulo:"Teste 456" , url:"teste.pdf" }
+                       
+                                          ] ;
+
     var pais = [
                     { nome:"Brasil" }
                   , { nome:"Argentina" }
