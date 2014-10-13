@@ -1,0 +1,47 @@
+<html ng-app='ToDoApp'>
+  <head>
+  	    <meta charset="UTF-8" /> 
+        <title> To Do List </title>
+         
+     </head>
+     <body>
+     	  <script src="angular.min.js"></script>
+          <script src="appTarefas.js"></script>
+     	
+     	
+            <br>
+             
+     	
+     	      <div ng-controller="TarefasCtrl" class="todo" >
+              <span> {{  restante()  }} de {{ todos.length }} restante </span>
+              <ul class="unstyled">
+                  <li ng-repeat="todo in todos">
+
+                    <input type="checkbox" ng-model="todo-feito" >
+                   <span class="feito{{ todo.feito }}"> {{ todo.text }} > </span>
+                   </li> 
+               </ul> 
+
+               <form ng-submit="addTodo()" >
+                   <input type="text" ng-model="todoText" size="30"
+                      placeholder="Adicionar Novas Tarefas"
+                   >
+
+                   <input class="btn" type="submit" value="adicionar" >
+ 
+
+               </form>
+                  
+             
+     	      </div>  
+    
+
+
+
+
+
+
+
+          
+     </body>
+     </html>
