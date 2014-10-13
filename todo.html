@@ -13,12 +13,15 @@
              
      	
      	      <div ng-controller="TarefasCtrl" class="todo" >
-              <span> {{  restante()  }} de {{ todos.length }} restante </span>
-              <ul class="unstyled">
-                  <li ng-repeat="todo in todos">
 
-                    <input type="checkbox" ng-model="todo-feito" >
-                   <span class="feito{{ todo.feito }}"> {{ todo.text }} > </span>
+              <span> {{ restante() }} de {{ todos.length }} restante </span>
+              <ul class="unstyled">
+
+                    <li ng-repeat="todo in todos" >
+
+                           <input type="checkbox" ng-model="todo.feito">
+                          <span class="feito-{{todo.feito}}">{{todo.tarefa}}</span>  
+                        
                    </li> 
                </ul> 
 
@@ -33,14 +36,7 @@
                </form>
                   
              
-     	      </div>  
-    
-
-
-
-
-
-
+     	      </div> 
 
           
      </body>
