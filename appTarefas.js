@@ -35,6 +35,14 @@ modulo.controller('TarefasCtrl', function( $scope ) {
 
     };
 
+    $scope.restante = function() {
+      var count = 0;
+      angular.forEach($scope.todos, function(todo) {
+      count += todo.feito ? 0 : 1;
+      });
+      return count;
+      };
+
 });//End Controller
    
 
